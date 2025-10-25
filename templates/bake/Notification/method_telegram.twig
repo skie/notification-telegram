@@ -1,0 +1,13 @@
+    /**
+     * Get the Telegram representation of the notification
+     *
+     * @param \Cake\Datasource\EntityInterface|\Cake\Notification\AnonymousNotifiable $notifiable The entity receiving the notification
+     * @return \Cake\Notification\Telegram\Message\TelegramMessage
+     */
+    public function toTelegram(EntityInterface|AnonymousNotifiable $notifiable): TelegramMessage
+    {
+        return TelegramMessage::create()
+            ->content('*{{ notificationName }}*')
+            ->line('You have a new notification')
+            ->parseMode(ParseMode::Markdown);
+    }
