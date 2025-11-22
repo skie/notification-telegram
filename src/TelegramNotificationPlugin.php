@@ -11,7 +11,7 @@ use Cake\TelegramNotification\Provider\TelegramChannelProvider;
 /**
  * Telegram Plugin for Notification
  */
-class Plugin extends BasePlugin
+class TelegramNotificationPlugin extends BasePlugin
 {
     /**
      * Load all the plugin configuration and bootstrap logic.
